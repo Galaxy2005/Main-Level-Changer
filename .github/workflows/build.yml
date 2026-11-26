@@ -13,7 +13,7 @@ jobs:
       - name: Build Geode Mod
         uses: geode-sdk/build-geode-mod@main
         with:
-          target: ios
+          platform: ios
         id: build
 
       - name: Upload Artifact
