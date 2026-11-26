@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
-project(MainLevelChanger)
+project(main-level-changer)
 
 find_package(Geode REQUIRED)
 
-add_geode_mod(MainLevelChanger
-    src/main.cpp
-)
+add_geode_mod(main-level-changer)
