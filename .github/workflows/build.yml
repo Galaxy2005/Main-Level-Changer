@@ -10,14 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build Geode Mod
-        uses: geode-sdk/build-geode-mod@main
-        with:
-          target: iOS
-        id: build
+      - name: Install Geode CLI
+        uses: geode-sdk/install-geode-cli@main
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: main-level-changer-ios
-          path: ${{ steps.build.outputs.build-output }}
+      - name: Build and Package Mod for iOS
+        run: geode package --target iOS
